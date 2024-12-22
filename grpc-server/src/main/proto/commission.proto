@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package order;
+
+service OrderService {
+  rpc ProcessOrder(OrderRequest) returns (OrderResponse);
+}
+
+message OrderRequest {
+  int32 courierId = 1;  // ID курьера
+  int32 orderValue = 2; // Стоимость заказа
+  int32 countOrder = 3; // Кол-во заказаов
+}
+
+message OrderResponse {
+  int32 courierId = 1;         // ID курьера
+  float commissionRate = 2;    // Комиссия
+  float courierEarnings = 3;   // Заработок курьера
+  float platformEarnings = 4;  // Заработок платформы
+}

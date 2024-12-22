@@ -1,0 +1,4 @@
+rootProject.name = 'dostavista-project'
+include 'grpc-client'
+include 'grpc-server'
+
